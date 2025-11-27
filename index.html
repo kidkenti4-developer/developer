@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knotware Engineers | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top left, #01271e, #022c24, #064f42);
+      color: #e0f2e9;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* --- Header --- */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(6, 60, 49, 0.9);
+      padding: 15px 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      color: #a9e5bb;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 5px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #c9f3d8;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #70e1b9;
+      transform: scale(1.1);
+    }
+
+    /* --- Settings Icon --- */
+    .settings-icon {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #a9e5bb;
+      z-index: 200;
+    }
+
+    /* --- Settings Menu --- */
+    .settings-menu {
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      width: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 200;
+    }
+
+    .settings-menu select,
+    .settings-menu button {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    select {
+      background: rgba(255, 255, 255, 0.2);
+      color: #00030e;
+    }
+
+    button {
+      background: #04b88a;
+      color: #020914;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #039d76;
+    }
+
+    /* --- Light Theme --- */
+    .light-theme {
+      background: #f0f5f4;
+      color: #08251e;
+    }
+
+    .light-theme header {
+      background: #c9f3d8;
+      color: #073a31;
+    }
+
+    .light-theme nav ul li a {
+      color: #022c24;
+    }
+
+    .light-theme .settings-menu {
+      background: rgba(255, 255, 255, 0.9);
+      color: #041f1b;
+    }
+
+    /* --- Home Section --- */
+    .home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeIn 2s ease-out forwards;
+      margin-top: 80px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #a9e5bb;
+      margin-bottom: 25px;
+      box-shadow: 0 0 25px rgba(169, 229, 187, 0.4);
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 15px rgba(169, 229, 187, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(169, 229, 187, 0.7); }
+      100% { box-shadow: 0 0 15px rgba(169, 229, 187, 0.3); }
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #a9e5bb;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(169, 229, 187, 0.4);
+      animation: slideUp 1.5s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #c9f3d8;
+      max-width: 600px;
+      line-height: 1.6;
+      animation: fadeIn 2.5s ease-out;
+    }
+
+    .btn {
+      margin-top: 30px;
+      background: #70e1b9;
+      color: #052f27;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #93f1c9;
+      transform: translateY(-3px);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #8fd5b3;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h2 { font-size: 2rem; }
+      p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Settings Icon -->
+  <div class="settings-icon" onclick="toggleSettings()">⚙️</div>
+  <div class="settings-menu" id="settingsMenu">
+    <select id="themeSelect" onchange="changeTheme(this.value)">
+      <option value="dark">🌙 Dark Theme</option>
+      <option value="light">☀️ Light Theme</option>
+    </select>
+
+    <select id="langSelect" onchange="changeLanguage(this.value)">
+      <option value="en">🇬🇧 English</option>
+      <option value="fr">🇫🇷 French</option>
+      <option value="rw">🇷🇼 Kinyarwanda</option>
+    </select>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <header>
+    <h1>KNOTWARE ENGINEERS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home🏡</a></li>
+        <li><a href="about.html">About♻</a></li>
+        <li><a href="services.html">Services💬</a></li>
+        <li><a href="P.Assessment.html">Calculators🔢</a></li>
+        <li><a href="contact.html">Contact📞</a></li>
+        <li><a href="help.html">Help❓</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home">
+    <img src="logo.jpg" alt="Knotware Logo" class="logo">
+    <h2>Welcome to Knotware Engineers</h2>
+    <p>“Engineering the future, one connection at a time.”  
+    <br>Where innovation meets precision, and technology builds tomorrow.</p>
+    
+  </section>
+
+  <footer>
+    © 2025 Knotware Engineers. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleSettings() {
+      const menu = document.getElementById('settingsMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function changeTheme(theme) {
+      if (theme === 'light') document.body.classList.add('light-theme');
+      else document.body.classList.remove('light-theme');
+    }
+
+    function changeLanguage(lang) {
+      const title = document.querySelector('.home h2');
+      const para = document.querySelector('.home p');
+      if (lang === 'fr') {
+        title.textContent = "Bienvenue chez Knotware Engineers";
+        para.innerHTML = "«Ingénierie du futur, une connexion à la fois.»<br> Où l'innovation rencontre la précision et la technologie construit demain.";
+      } else if (lang === 'rw') {
+        title.textContent = "Murakaza neza muri Knotware Engineers";
+        para.innerHTML = "“Gukora ejo hazaza hihuse, buri gihe tugahuza tekinoloji.”<br> Aho udushya duhura n'ukuri, kandi ikoranabuhanga ryubaka ejo hazaza.";
+      } else {
+        title.textContent = "Welcome to Knotware Engineers";
+        para.innerHTML = "“Engineering the future, one connection at a time.”<br>Where innovation meets precision, and technology builds tomorrow.";
+      }
+    }
+
+    function logout() {
+      alert("You have been logged out!");
+      window.location.href = "LOG IN.HTML";
+    }
+  </script>
+</body>
+</html>

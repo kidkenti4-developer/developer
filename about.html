@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Knotware Engineers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #041f1b, #073a31);
+      color: #e0f2e9;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(6, 60, 49, 0.85);
+      text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #a9e5bb;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #c9f3d8;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #70e1b9;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .about-section h2 {
+      color: #a9e5bb;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #d6f0e5;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 25px;
+      width: 260px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .card h3 {
+      color: #70e1b9;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #cdeede;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #8fd5b3;
+      background-color: rgba(6, 60, 49, 0.8);
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .values {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KNOTWARE ENGINEERS</h1>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home🏡</a></li>
+        <li><a href="about.html">About♻</a></li>
+        <li><a href="services.html">Services💬</a></li>
+        <li><a href="P.Assessment.html">Calculators🔢</a></li>
+        <li><a href="contact.html">Contact📞</a></li>
+        <li><a href="help.html">Help❓</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>About Knotware</h2>
+    <p>
+      At <strong>Knotware Engineers</strong>, we believe innovation and precision are the twin forces shaping tomorrow’s world.  
+      Founded with a passion for technology and excellence, we specialize in crafting intelligent engineering solutions that bridge software and hardware — connecting ideas to results.
+    </p>
+
+    <div class="values">
+      <div class="card">
+        <h3>Innovation</h3>
+        <p>We harness creativity to build cutting-edge solutions that empower industries and communities alike.</p>
+      </div>
+      <div class="card">
+        <h3>Integrity</h3>
+        <p>We uphold transparency, reliability, and professionalism in everything we create and deliver.</p>
+      </div>
+      <div class="card">
+        <h3>Impact</h3>
+        <p>Every project we undertake at Knotware aims to make a measurable difference in technology and society.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Knotware Engineers. All rights reserved.
+  </footer>
+
+</body>
+</html>

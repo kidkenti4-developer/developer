@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normal Calculator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(180deg, rgba(2, 186, 156, 0.692), black);
+      font-family: Arial, sans-serif;
+    }
+    .calculator {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    input {
+      width: 240px;
+      height: 50px;
+      text-align: right;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      border: none;
+      outline: none;
+      background: #eee;
+      border-radius: 8px;
+      padding: 5px;
+    }
+    button {
+      width: 55px;
+      height: 55px;
+      margin: 5px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      background: teal;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #037171;
+    }
+  </style>
+</head>
+<body>
+  
+<!-- Home Section -->
+  <section id="home">
+    <a href="P.Assessment.html">GO BACK</a>
+    <h2>Basic Calculator</h2>
+    <p>
+      Focus on solutions with Knotware,<br>
+      We're here to help you on averything as<br> Knotware Engineers,<br>
+      We engineer intelligence.
+    </p>
+  <div class="calculator">
+    <input type="text" id="display" placeholder="0" readonly>
+    <div>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="backspace()">←</button>
+      <button onclick="insert('%')">%</button>
+      <button onclick="insert('/')">÷</button>
+    </div>
+    <div>
+      <button onclick="insert('7')">7</button>
+      <button onclick="insert('8')">8</button>
+      <button onclick="insert('9')">9</button>
+      <button onclick="insert('*')">×</button>
+    </div>
+    <div>
+      <button onclick="insert('4')">4</button>
+      <button onclick="insert('5')">5</button>
+      <button onclick="insert('6')">6</button>
+      <button onclick="insert('-')">−</button>
+    </div>
+    <div>
+      <button onclick="insert('1')">1</button>
+      <button onclick="insert('2')">2</button>
+      <button onclick="insert('3')">3</button>
+      <button onclick="insert('+')">+</button>
+    </div>
+    <div>
+      <button onclick="insert('0')">0</button>
+      <button onclick="insert('.')">.</button>
+      <button onclick="square()">x²</button>
+      <button onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById("display");
+
+    function insert(value) {
+      display.value += value;
+    }
+
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    function backspace() {
+      display.value = display.value.slice(0, -1);
+    }
+
+    function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    }
+
+    function square() {
+      if (display.value !== "") {
+        display.value = Math.pow(eval(display.value), 2);
+      }
+    }
+  </script>
+
+</body>
+</html>

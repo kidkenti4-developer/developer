@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P.Assessment | Knotware Engineers</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d4738e0;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #003300;
+      padding: 15px;
+    }
+
+    header h1 {
+      color: #048f61ce;
+      margin: 0;
+    }
+
+    /* 👇 Fix navigation layout */
+    nav ul {
+      list-style: none; /* remove bullets */
+      margin: 10px 0 0;
+      padding: 0;
+      display: flex; /* make items go horizontally */
+      justify-content: center; /* center them */
+      gap: 30px; /* space between items */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #076d81aa;
+    }
+
+    section {
+      margin-top: 60px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    a.button {
+      background: #00cc66;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.button:hover {
+      background: #00ff88;
+      color: black;
+    }
+
+    footer {
+      background: #002200;
+      padding: 15px;
+      color: silver;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Knotware</h1>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home🏡</a></li>
+        <li><a href="about.html">About♻</a></li>
+        <li><a href="services.html">Services💬</a></li>
+        <li><a href="P.Assessment.html">Calculators🔢</a></li>
+        <li><a href="contact.html">Contact📞</a></li>
+        <li><a href="help.html">Help❓</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Select Calculator Type</h2>
+    <div class="button-container">
+      <a href="calc.html" class="button">Basic Calculator</a>
+      <a href="scientific calc.html" class="button">Scientific Calculator</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Knotware Engineers. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

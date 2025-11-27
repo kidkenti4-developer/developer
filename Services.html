@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Knotware Engineers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #041f1b, #073a31);
+      color: #e0f2e9;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: rgba(6, 60, 49, 0.85);
+      text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #a9e5bb;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #c9f3d8;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #70e1b9;
+    }
+
+    .services-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      color: #a9e5bb;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .services-section p.intro {
+      color: #d6f0e5;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 25px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .card h3 {
+      color: #70e1b9;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      color: #cdeede;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #8fd5b3;
+      background-color: rgba(6, 60, 49, 0.8);
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KNOTWARE ENGINEERS</h1>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home🏡</a></li>
+        <li><a href="about.html">About♻</a></li>
+        <li><a href="services.html">Services💬</a></li>
+        <li><a href="P.Assessment.html">Calculators🔢</a></li>
+        <li><a href="contact.html">Contact📞</a></li>
+        <li><a href="help.html">Help❓</a></li>
+      </ul>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <p class="intro">
+      At <strong>Knotware Engineers</strong>, we specialize in delivering cutting-edge solutions that merge technology, engineering, and innovation.  
+      Our expertise empowers clients to achieve efficiency, security, and sustainability in every project.
+    </p>
+
+    <div class="service-cards">
+      <div class="card">
+        <h3>Software Engineering</h3>
+        <p>We design and develop reliable, scalable software systems that power industries — from automation to enterprise solutions.</p>
+      </div>
+
+      <div class="card">
+        <h3>Hardware Integration</h3>
+        <p>Our engineers create seamless bridges between software and hardware for intelligent, interconnected systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Project Consultancy</h3>
+        <p>From concept to completion, we provide expert assessment, planning, and technical consulting for complex projects.</p>
+      </div>
+
+      <div class="card">
+        <h3>Innovation Research</h3>
+        <p>We explore new technologies and methods to drive progress in engineering, sustainability, and digital transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Knotware Engineers. All rights reserved.
+  </footer>
+
+</body>
+</html>
